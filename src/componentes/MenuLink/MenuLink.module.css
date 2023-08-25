@@ -1,0 +1,29 @@
+.link {
+    display: inline-block;
+    position: relative;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--cor-fonte-principal);
+    font-family: var(--fonte-principal);
+}
+
+.link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--azul-medio);
+    margin-top: 4px;
+    transition: 0.3s;
+    position: absolute;
+}
+
+.link:hover::after,
+.link.ativo::after {
+    width: 100%;
+
+}
+
+.linkDestacado::after {
+    width: 100%;
+}
